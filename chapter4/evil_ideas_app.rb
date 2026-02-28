@@ -12,5 +12,5 @@ end
 print "File encoded. Please enter a name for this idea: "
 idea_name = gets.strip
 File::open( "./ideas/idea-" + idea_name + ".txt", "w") do |f|
-  f << idea
+  f << idea.upcase.reverse.gsub!(" ", "")
 end
