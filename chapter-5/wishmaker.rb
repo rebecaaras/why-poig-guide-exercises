@@ -1,4 +1,4 @@
-require './endertromb'
+require_relative './endertromb'
 
 # Grants wishes
   # 
