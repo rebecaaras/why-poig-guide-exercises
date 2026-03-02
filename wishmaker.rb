@@ -23,6 +23,6 @@ class WishMaker
       raise Exception, "No energy left."
     end
     @energy -= 1
-    Endertromb::make( wish )
+    Endertromb::make( wish , @energy)
   end
 end
