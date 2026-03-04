@@ -30,3 +30,14 @@ def wipe_mutterings_from( sentence )
   end
   sentence
 end
+
+# More elegantly now... avoid infinite loop in case of non matching
+# parenthesis
+def elegantly_wipe_mutterings_from( sentence )
+  unless sentence.respond_to? :gsub
+    raise ArgumentError,
+      "cannot wipe mutterings from a #{ sentence.class }"
+  end
+
+  sentence.gsub(/\([-\w]+\)/, '')
+end
