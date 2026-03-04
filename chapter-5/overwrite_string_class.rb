@@ -17,7 +17,7 @@ class String
   ]
 
   def name_significance
-    parts = self.split( '-')
+    parts = split( '-') #ommits self
     sylables = @@sylables.dup
     signif = parts.collect do |p|
       sylables.shift[p]
