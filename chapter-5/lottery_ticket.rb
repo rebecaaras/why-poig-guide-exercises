@@ -1,9 +1,9 @@
 class LotteryTicket
   NUMERIC_RANGE = 1..25
 
-  attr_reader :picks, :purchased # what does attr_reader do??
+  attr_reader :picks, :purchased # what does attr_reader do?? Sets the getters for class var
 
-  def initialize( *picks )
+  def initialize( *picks ) # * means any arguments will be passed as an array
     if picks.length != 3
       raise ArgumentError, "three numbers must be picked"
     elsif picks.uniq.length != 3
