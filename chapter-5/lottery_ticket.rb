@@ -16,6 +16,8 @@ class LotteryTicket
   end
 
   def self.new_random
-    Array.new(3) { rand(1..25) }
+    new_array = Array.new(3) { rand(1..25) }
+    return new_array if new_array.uniq.length === 3
+    self.new_random
   end
 end
